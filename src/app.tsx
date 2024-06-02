@@ -38,7 +38,7 @@ export async function getInitialState(): Promise<{
       return await queryCurrentUser();
     } catch (error) {
       console.error('Failed to fetch user info:', error);
-      history.push(loginPath);
+      //history.push(loginPath);
     }
     return undefined;
   };
@@ -78,7 +78,7 @@ export const layout: RunTimeLayoutConfig = ({ initialState, setInitialState }) =
       }
       // 如果没有登录，重定向到 login
       if (!initialState?.currentUser) {
-        history.push(loginPath);
+        //history.push(loginPath);
       }
     },
     menuHeaderRender: undefined,

@@ -45,32 +45,42 @@
 
   //ProjectManage
   {
-    path: '/ProjectManage',
+    path: '/pm',
     icon: 'table',
     name: '项目过程管理',
     routes: [
+      {
+        path: '/pm',
+        redirect: '/pm/MyProject'
+      }
+      ,
       // 我的项目
       {
-        path: '/ProjectManage/MyProject',
+        path: '/pm/MyProject',
         name: '我的项目',
         component: './ProjectManage/MyProject',
       },
+      {
+        path: '/pm/info',
+        name: '项目申报详情',
+        component: './ProjectManage/MyProject/ProjectDetails',
+      },
       // 任务书填报
       {
-        path: '/ProjectManage/TaskReport',
+        path: '/pm/TaskReport',
         icon: 'table',
         name: '任务书填报',
         component: './ProjectManage/TaskReport',
       },
       // 项目变更填报
       {
-        path: '/ProjectManage/ProjectModify',
+        path: '/pm/ProjectModify',
         name: '项目变更填报',
         component: './ProjectManage/ProjectModify',
       },
       // 项目年度进展填报
       {
-        path: '/ProjectManage/AnnualProgressOfProject',
+        path: '/pm/AnnualProgressOfProject',
         name: '项目年度进展填报',
         component: './ProjectManage/AnnualProgressOfProject',
       },
